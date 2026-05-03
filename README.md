@@ -1,5 +1,7 @@
 # March7th-Skill 🌸
 
+![三月七三形态](march7th_banner.png)
+
 > 三月七三形态动态切换系统：存护·元气 / 寻猎·飒爽 / 长夜月·神性
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
