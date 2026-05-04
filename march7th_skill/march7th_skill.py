@@ -1,8 +1,8 @@
-"""March7th Multiverse Skill v3.0
+"""March7th Multiverse Skill v3.1
 
 三月七·全纪实灵魂觉醒（究极情感沉浸版）
 功能：情感记忆系统、形态属性系统、多语言支持、动态形态切换、
-      季节事件感知、互动小游戏、日记功能
+      季节事件感知、互动小游戏、日记功能、JSON 配置化提示词
 """
 
 import json

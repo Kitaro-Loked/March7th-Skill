@@ -1,16 +1,20 @@
-# March7th-Skill 🌸 v3.0
+# March7th-Skill 🌸 v3.1
 
 ![三月七三形态](march7th_banner.png)
 
 > 三月七·全纪实灵魂觉醒（究极情感沉浸版）：存护·元气 / 寻猎·飒爽 / 长夜月·神性
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://github.com/Kitaro-Loked/March7th-Skill/actions/workflows/ci.yml/badge.svg)](https://github.com/Kitaro-Loked/March7th-Skill/actions)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 
 ## ✨ 简介
 
 这是一个为 [OpenClaw](https://github.com/openclaw) 框架设计的 Skill，让你的 AI 助手化身《崩坏：星穹铁道》中的三月七，并在三种不同形态间自由切换！
 
-**v3.0 重大更新**：全面重构，新增情感记忆系统、形态属性系统、多语言支持、动态形态切换、季节事件感知、互动小游戏、日记功能。
+**v3.1 更新**：提示词全面配置化！所有系统提示词、变身台词、切换回复从代码剥离至 `prompts.json`，支持热重载和多语言扩展，无需修改代码即可自定义角色。
+
+**v3.0 重大更新**：情感记忆系统、形态属性系统、多语言支持、动态形态切换、季节事件感知、互动小游戏、日记功能。
 
 | 形态 | 特点 | 风格 | 属性倾向 |
 |------|------|------|----------|
@@ -130,26 +134,59 @@ pip install -r requirements.txt
 March7th-Skill/
 ├── SKILL.md                          # Skill 说明文档
 ├── README.md                         # 本文件
+├── CHANGELOG.md                      # 版本更新日志
 ├── LICENSE                           # MIT 许可证
 ├── requirements.txt                  # 依赖列表
-├── config.json                       # Skill 配置文件
+├── docs/
+│   └── API.md                        # API 文档
 ├── __init__.py                       # 包入口
 ├── march7th_skill/                   # Skill 主包
 │   ├── __init__.py
 │   ├── march7th_skill.py             # Skill 主类
-│   ├── config.json                   # 配置文件
-│   ├── prompts.py                    # 多语言提示词
-│   ├── form_manager.py               # 形态管理器
+│   ├── config.json                   # 配置文件（属性、事件、小游戏）
+│   ├── prompts.json                  # 提示词配置（系统提示词、变身台词、多语言）⭐
+│   ├── prompts.py                    # 提示词加载器（支持热重载）
+│   ├── form_manager.py               # 形态管理器（策略模式）
 │   ├── memory.py                     # 情感记忆系统
 │   ├── events.py                     # 季节事件 & 小游戏
-│   └── data/                         # 数据目录
+│   └── data/
+│       └── memory.json               # 记忆持久化文件
 ├── tests/                            # 测试目录
 │   ├── __init__.py
-│   └── test_skill.py
+│   └── test_skill.py                 # 完整测试套件
 └── .github/                          # GitHub 配置
+    ├── ISSUE_TEMPLATE/
+    ├── workflows/
+    │   └── ci.yml                    # CI 自动化测试
+    └── PULL_REQUEST_TEMPLATE.md
 ```
 
 ## 🔧 自定义配置
+
+### 修改提示词（无需改代码！）
+
+编辑 `march7th_skill/prompts.json` 即可自定义：
+
+```json
+{
+  "forms": {
+    "存护": {
+      "system_prompts": {
+        "zh": "你的自定义提示词...",
+        "en": "Your custom prompt...",
+        "ja": "あなたのカスタムプロンプト..."
+      },
+      "shift_message": {
+        "zh": "你的自定义变身台词..."
+      }
+    }
+  }
+}
+```
+
+修改后自动生效（或重启 Skill）！
+
+### 修改配置
 
 编辑 `march7th_skill/config.json` 即可自定义：
 
@@ -159,7 +196,27 @@ March7th-Skill/
 - **季节事件**：修改 `seasonal_events`
 - **小游戏内容**：修改 `minigames`
 
-无需修改代码即可实现个性化配置！
+### 添加新语言
+
+1. 在 `prompts.json` 的 `meta.supported_languages` 中添加语言代码
+2. 为每个形态的 `system_prompts`、`shift_message`、`switch_reply` 添加新语言
+3. 在 `config.json` 的季节事件消息中添加新语言
+
+### 添加新形态
+
+1. 在 `prompts.json` 的 `forms` 中添加新形态的提示词
+2. 在 `config.json` 的 `forms` 中添加新形态的属性配置
+3. 在 `form_manager.py` 中创建新的形态策略类
+4. 在 `FormManager._FORM_STRATEGIES` 中注册新形态
+
+详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## 📚 文档
+
+- [SKILL.md](SKILL.md) - Skill 使用说明
+- [docs/API.md](docs/API.md) - 详细 API 文档
+- [CHANGELOG.md](CHANGELOG.md) - 版本更新日志
+- [CONTRIBUTING.md](CONTRIBUTING.md) - 贡献指南
 
 ## 🤝 贡献
 

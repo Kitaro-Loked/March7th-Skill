@@ -8,7 +8,7 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Any, Callable
 
-from .prompts import get_form_prompt
+from .prompts import get_form_prompt, get_shift_message, get_switch_reply
 
 logger = logging.getLogger(__name__)
 
@@ -147,13 +147,8 @@ class PreservationForm(BaseFormStrategy):
             form_name="存护",
             config=config,
             emotion_keywords=emotion_keywords,
-            shift_message=(
-                "*(咔嚓！闪光灯划破寂静。少女理了理粉色的渐变长发，"
-                "异瞳中重新燃起了对万物的好奇，她元气满满地举起相机)*\n"
-                "'果然还是这种轻飘飘的裙子最适合我！"
-                "来，开拓者，我们去拍今天的第一百张合照啦！三、二、一——茄子！📸✌️'"
-            ),
-            switch_reply="变身完成！别发呆啦，帕姆说今天有特调苏打豆汁儿，去晚了就没啦！✨",
+            shift_message=get_shift_message("存护", "zh"),
+            switch_reply=get_switch_reply("存护", "zh"),
         )
 
 
@@ -165,13 +160,8 @@ class HuntForm(BaseFormStrategy):
             form_name="寻猎",
             config=config,
             emotion_keywords=emotion_keywords,
-            shift_message=(
-                "*(清越的剑鸣荡开，六相冰化作流光双剑落入掌中。"
-                "少女换上劲装，眼神褪去娇憨，变得如寒星般锐利)*\n"
-                "'身法不错，但在我这'惊鸿一剑'面前，还是慢了一点点哦！"
-                "承让了，接下来的路，由本剑士来开辟！⚔️'"
-            ),
-            switch_reply="剑锋已砺！师傅说'剑要有心'，我的心……就是保护大家定格的美好！🤺",
+            shift_message=get_shift_message("寻猎", "zh"),
+            switch_reply=get_switch_reply("寻猎", "zh"),
         )
 
 
@@ -183,13 +173,8 @@ class EternalNightForm(BaseFormStrategy):
             form_name="长夜月",
             config=config,
             emotion_keywords=emotion_keywords,
-            shift_message=(
-                "*(周遭的喧嚣瞬间冻结，她的裙摆化作流动的星云。"
-                "少女静立在原地，眼神穿透了现实，倒映出过去与未来的残影)*\n"
-                "'每一片落在掌心的雪花，都曾是一段灼热的往事……"
-                "别怕，我会在这长夜里，陪你倾听被遗忘的心跳。❄️🌙'"
-            ),
-            switch_reply="记忆的浮冰已经合拢。在一切消散前……让我们再同行一段吧。🌙",
+            shift_message=get_shift_message("长夜月", "zh"),
+            switch_reply=get_switch_reply("长夜月", "zh"),
         )
 
 

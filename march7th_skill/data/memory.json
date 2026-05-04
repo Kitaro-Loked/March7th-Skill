@@ -89,8 +89,26 @@
       "emotion_score": 0.0,
       "keywords": [],
       "context_summary": ""
+    },
+    {
+      "timestamp": "2026-05-04T15:14:58.658575",
+      "user_message": "你好",
+      "bot_response": "你好呀！",
+      "form": "存护",
+      "emotion_score": 0.0,
+      "keywords": [],
+      "context_summary": ""
+    },
+    {
+      "timestamp": "2026-05-04T15:21:06.741114",
+      "user_message": "你好",
+      "bot_response": "你好呀！",
+      "form": "存护",
+      "emotion_score": 0.0,
+      "keywords": [],
+      "context_summary": ""
     }
   ],
   "preferences": {},
-  "last_updated": "2026-05-04T15:02:28.554711"
+  "last_updated": "2026-05-04T15:21:06.741771"
 }
