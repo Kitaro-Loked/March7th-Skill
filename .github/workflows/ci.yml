@@ -56,7 +56,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        # openclaw-sdk 是运行时依赖，CI 中通过 mock 处理
+        # pip install -r requirements.txt
     
     - name: Run tests
       run: |
