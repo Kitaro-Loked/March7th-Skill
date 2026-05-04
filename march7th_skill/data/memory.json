@@ -1,0 +1,96 @@
+{
+  "memories": [
+    {
+      "timestamp": "2026-05-04T14:59:23.429281",
+      "user_message": "你好三月七",
+      "bot_response": "你好呀开拓者！",
+      "form": "存护",
+      "emotion_score": 0.8,
+      "keywords": [],
+      "context_summary": ""
+    },
+    {
+      "timestamp": "2026-05-04T14:59:23.430881",
+      "user_message": "教我剑术",
+      "bot_response": "好！看好了！",
+      "form": "寻猎",
+      "emotion_score": 0.6,
+      "keywords": [],
+      "context_summary": ""
+    },
+    {
+      "timestamp": "2026-05-04T14:59:23.434864",
+      "user_message": "测试",
+      "bot_response": "收到！",
+      "form": "存护",
+      "emotion_score": 0.0,
+      "keywords": [],
+      "context_summary": ""
+    },
+    {
+      "timestamp": "2026-05-04T14:59:23.481369",
+      "user_message": "你好",
+      "bot_response": "你好呀！",
+      "form": "存护",
+      "emotion_score": 0.0,
+      "keywords": [],
+      "context_summary": ""
+    },
+    {
+      "timestamp": "2026-05-04T14:59:23.505598",
+      "user_message": "你好",
+      "bot_response": "你好呀！",
+      "form": "存护",
+      "emotion_score": 0.5,
+      "keywords": [],
+      "context_summary": ""
+    },
+    {
+      "timestamp": "2026-05-04T14:59:39.940308",
+      "user_message": "你好三月七",
+      "bot_response": "你好呀开拓者！",
+      "form": "存护",
+      "emotion_score": 0.8,
+      "keywords": [],
+      "context_summary": ""
+    },
+    {
+      "timestamp": "2026-05-04T14:59:39.945801",
+      "user_message": "测试",
+      "bot_response": "收到！",
+      "form": "存护",
+      "emotion_score": 0.0,
+      "keywords": [],
+      "context_summary": ""
+    },
+    {
+      "timestamp": "2026-05-04T14:59:39.985656",
+      "user_message": "你好",
+      "bot_response": "你好呀！",
+      "form": "存护",
+      "emotion_score": 0.0,
+      "keywords": [],
+      "context_summary": ""
+    },
+    {
+      "timestamp": "2026-05-04T15:00:18.199490",
+      "user_message": "你好",
+      "bot_response": "你好呀！",
+      "form": "存护",
+      "emotion_score": 0.0,
+      "keywords": [],
+      "context_summary": ""
+    },
+    {
+      "timestamp": "2026-05-04T15:02:28.554302",
+      "user_message": "你好",
+      "bot_response": "你好呀！",
+      "form": "存护",
+      "emotion_score": 0.0,
+      "keywords": [],
+      "context_summary": ""
+    }
+  ],
+  "preferences": {},
+  "last_updated": "2026-05-04T15:02:28.554711"
+}
