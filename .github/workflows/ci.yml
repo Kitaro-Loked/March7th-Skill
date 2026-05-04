@@ -64,8 +64,8 @@ jobs:
     
     - name: Check JSON validity
       run: |
-        python -c "import json; json.load(open('march7th_skill/config.json')); print('config.json OK')"
-        python -c "import json; json.load(open('march7th_skill/prompts.json')); print('prompts.json OK')"
+        python -c "import json; json.load(open('march7th_skill/config.json', encoding='utf-8')); print('config.json OK')"
+        python -c "import json; json.load(open('march7th_skill/prompts.json', encoding='utf-8')); print('prompts.json OK')"
 
   type-check:
     runs-on: ubuntu-latest
